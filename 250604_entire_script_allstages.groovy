@@ -1,0 +1,3 @@
+setImageType('FLUORESCENCE');
+runPlugin('qupath.imagej.detect.cells.PositiveCellDetection', '{"detectionImage":"DAPI","requestedPixelSizeMicrons":0.5,"backgroundRadiusMicrons":1.0,"backgroundByReconstruction":true,"medianRadiusMicrons":0.0,"sigmaMicrons":1.5,"minAreaMicrons":0.5,"maxAreaMicrons":170.0,"threshold":50.0,"watershedPostProcess":false,"cellExpansionMicrons":2.0,"includeNuclei":true,"smoothBoundaries":true,"makeMeasurements":true,"thresholdCompartment":"Nucleus: AF488 max","thresholdPositive1":1500.0,"thresholdPositive2":4000.0,"thresholdPositive3":5000.0,"singleThreshold":true}')
+runObjectClassifier("250604_classfier_AllStagesB");
