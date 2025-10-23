@@ -1,0 +1,40 @@
+conda deactivate
+conda env remove -n omnipose-env
+conda create -n bioenv python=3.11
+conda activate bioenv
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+conda install aicsimageio
+conda install pytorch torchvision pytorch-cuda=12.1 -c pytorch -c nvidia
+conda install matplotlib
+
+
+
+pip install --no-deps omnipose
+
+conda install -c conda-forge numba
+conda install -c conda-forge opencv
+
+conda install -c conda-forge opencv scikit-image matplotlib pandas tifffile networkx
+
+
+
+# edt and mahotas are easiest via pip
+pip install edt mahotas
+
+# networkit is best from conda-forge (binary build, avoids long compile)
+conda install -c conda-forge networkit
+
+conda install -c conda-forge scikit-learn
+
+
+pip install igraph mgen ncolor>=1.2.1 peakdetect torchvf tqdm matplotlib seaborn
+
+
+
+'Downgrade scipy to 1.9.x (old interface still works there):
+
+pip install "scipy<1.10"
+
+#Then test again:
+python -c "import omnipose; print(omnipose.__version__)"
